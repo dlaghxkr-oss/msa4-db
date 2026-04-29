@@ -74,11 +74,11 @@ SELECT
 	,employees.`name`
 	,employees.gender 
 FROM employees 
-WHERE employees.emp_id  IN( 
+WHERE employees.emp_id IN( 
 	SELECT salaries.emp_id 
 	FROM salaries 
 	GROUP BY salaries.emp_id
-	HAVING AVG(salaries.salary) >= 70000000 
+	HAVING AVG(salaries.salary) 
 );
 -- 10. 현재 직급이 'T005'인,
 --   사원의 사원번호와 이름을 조회해 주세요.
